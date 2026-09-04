@@ -8,7 +8,7 @@
 
 **V11.7.2 RC1 • Pre-Staging**
 
-[English](README.md) • [Português](README.pt-BR.md)
+[English](README.md) • [Português](README.pt-BR.md) • [Explore Source Code](source/)
 
 </div>
 
