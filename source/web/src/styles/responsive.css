@@ -1,0 +1,251 @@
+@media (max-width: 1180px) {
+  .metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .dashboard-grid, .booking-layout {
+    grid-template-columns: 1fr;
+  }
+  .booking-hero {
+    min-height: 420px;
+  }
+  .booking-card {
+    min-height: auto;
+  }
+  .time-slot-grid {
+    grid-template-columns: repeat(6, minmax(70px, 1fr));
+  }
+  .agenda-card {
+    grid-template-columns: minmax(140px, .75fr) minmax(200px, 1.2fr) minmax(140px, .65fr) 140px;
+  }
+  .agenda-card .status {
+    display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  .sidebar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: auto;
+    padding: 12px 16px;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+  }
+  .brand {
+    min-width: max-content;
+  }
+  .brand small {
+    display: none;
+  }
+  .sidebar nav {
+    display: flex;
+    gap: 5px;
+  }
+  .nav-button {
+    width: auto;
+    min-width: max-content;
+  }
+  .sidebar-card {
+    display: none;
+  }
+  .main-content {
+    margin-left: 0;
+    padding: 24px 16px 48px;
+  }
+  .topbar, .page-title-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .top-actions {
+    justify-content: flex-start;
+  }
+  .agenda-card {
+    grid-template-columns: 1fr auto;
+  }
+  .agenda-client {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+  .agenda-money {
+    justify-items: start;
+  }
+  .agenda-card select {
+    grid-column: 1 / -1;
+  }
+  .public-link {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .availability-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .availability-legend {
+    justify-content: flex-start;
+  }
+  .specific-date {
+    width: 100%;
+  }
+  .time-slot-grid {
+    grid-template-columns: repeat(4, minmax(68px, 1fr));
+  }
+}
+
+@media (max-width: 580px) {
+  .brand div {
+    display: none;
+  }
+  .metric-grid, .two-columns {
+    grid-template-columns: 1fr;
+  }
+  .metric-card {
+    min-height: 138px;
+  }
+  .panel {
+    padding: 17px;
+  }
+  .appointment-row {
+    grid-template-columns: 48px 1fr;
+  }
+  .appointment-meta {
+    display: none;
+  }
+  .appointment-row .deposit-badge {
+    grid-column: 2;
+    justify-self: start;
+  }
+  .top-actions {
+    width: 100%;
+  }
+  .top-actions button {
+    flex: 1 1 auto;
+  }
+  .toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .modal {
+    padding: 20px;
+  }
+  .form-actions, .modal-actions {
+    flex-direction: column-reverse;
+  }
+  .form-actions button, .modal-actions button {
+    width: 100%;
+  }
+  .service-summary {
+    flex-direction: column;
+  }
+  .service-summary > div:last-child {
+    text-align: left;
+  }
+  .booking-hero {
+    min-height: 360px;
+    padding: 28px;
+  }
+  .booking-logo {
+    margin-bottom: 22px;
+  }
+  .date-strip {
+    grid-template-columns: repeat(7, 62px);
+  }
+  .time-slot-grid {
+    grid-template-columns: repeat(3, minmax(70px, 1fr));
+  }
+  .receipt-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .expense-row {
+    grid-template-columns: 1fr auto;
+  }
+  .expense-row .icon-button {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 1180px) {
+  .overview-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .overview-primary-grid,
+  .overview-secondary-grid,
+  .overview-lower-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 850px) {
+  .overview-hero {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .overview-quick-actions {
+    justify-content: flex-start;
+  }
+  .timeline-item {
+    grid-template-columns: 92px 16px minmax(0, 1fr);
+  }
+  .timeline-item .status {
+    grid-column: 3;
+    justify-self: start;
+  }
+}
+
+@media (max-width: 580px) {
+  .overview-metrics {
+    grid-template-columns: 1fr;
+  }
+  .overview-quick-actions,
+  .next-client-actions,
+  .overview-first-day > div {
+    width: 100%;
+  }
+  .overview-quick-actions button,
+  .next-client-actions button,
+  .overview-first-day button {
+    flex: 1 1 auto;
+  }
+  .next-appointment-card {
+    grid-template-columns: 1fr;
+  }
+  .next-time-block {
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+  .next-time-block strong {
+    font-size: 1.5rem;
+  }
+  .next-client-copy {
+    padding: 0 18px 18px;
+  }
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    border-bottom: 1px solid var(--border);
+  }
+  .timeline-dot {
+    display: none;
+  }
+  .timeline-item .status {
+    grid-column: 1;
+  }
+  .attention-list button {
+    grid-template-columns: 30px 1fr;
+  }
+  .attention-list em {
+    grid-column: 2;
+  }
+  .movement-chart {
+    overflow-x: auto;
+  }
+  .movement-bar {
+    min-width: 34px;
+  }
+}
