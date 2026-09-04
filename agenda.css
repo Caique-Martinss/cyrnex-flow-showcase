@@ -1,0 +1,611 @@
+/* V11.4 UI — identidade visual unificada + integridade global de cores */
+html,
+body,
+.app-shell,
+.sidebar,
+.main-content,
+.panel,
+.metric-card,
+input,
+select,
+textarea,
+button {
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 92% 4%, var(--accent-glow), transparent 26%),
+    var(--bg);
+}
+
+:root[data-theme='dark'] .app-shell {
+  background:
+    radial-gradient(circle at 84% -4%, rgba(214, 163, 75, 0.11), transparent 28%),
+    radial-gradient(circle at 18% 105%, rgba(214, 163, 75, 0.055), transparent 31%),
+    #090b0a;
+}
+
+.sidebar {
+  overflow: hidden;
+  background: color-mix(in srgb, var(--surface) 94%, var(--bg));
+  border-right-color: var(--accent-line);
+}
+
+.sidebar::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  opacity: .72;
+}
+
+:root[data-theme='dark'] .sidebar {
+  background:
+    radial-gradient(circle at 5% 2%, rgba(214, 163, 75, 0.08), transparent 24%),
+    #0b0d0c;
+  box-shadow: 20px 0 55px rgba(0, 0, 0, 0.16);
+}
+
+.brand-mark {
+  background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+  color: var(--on-primary);
+  border: 1px solid rgba(255, 216, 141, 0.42);
+  box-shadow: 0 10px 28px var(--accent-glow);
+}
+
+.nav-button {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+  border-radius: 13px;
+}
+
+.nav-button:hover {
+  border-color: var(--border);
+}
+
+.nav-button.active {
+  border-color: var(--accent-line);
+  background:
+    linear-gradient(90deg, var(--primary-soft), color-mix(in srgb, var(--surface) 92%, transparent));
+  color: var(--primary-strong);
+  box-shadow: inset 3px 0 0 var(--primary);
+}
+
+:root[data-theme='dark'] .nav-button.active {
+  background:
+    linear-gradient(90deg, rgba(214, 163, 75, 0.15), rgba(214, 163, 75, 0.035));
+  color: var(--primary-strong);
+}
+
+.nav-button em {
+  background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+  color: var(--on-primary);
+}
+
+:root[data-theme='dark'] .sidebar-card {
+  border-color: var(--accent-line);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.main-content {
+  background: transparent;
+}
+
+.topbar {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 22px;
+  padding: 21px 22px;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: var(--panel-header-bg);
+  box-shadow: var(--shadow-sm);
+}
+
+.topbar::after,
+.management-workspace > .page-section > .page-title-row::after,
+.management-workspace .overview-hero::after,
+.management-workspace .management-hero::after {
+  content: '';
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  right: -88px;
+  bottom: -126px;
+  border: 1px solid var(--accent-line);
+  border-radius: 999px;
+  pointer-events: none;
+  opacity: .72;
+}
+
+.topbar-copy,
+.top-actions {
+  position: relative;
+  z-index: 1;
+}
+
+.theme-switch {
+  min-height: 42px;
+  padding: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: var(--surface-soft);
+}
+
+.theme-switch button {
+  min-height: 32px !important;
+  padding: 0 11px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  border: 1px solid transparent !important;
+  border-radius: 9px !important;
+  background: transparent !important;
+  color: var(--muted) !important;
+  box-shadow: none !important;
+  font-size: .73rem !important;
+  font-weight: 800 !important;
+  transform: none !important;
+}
+
+.theme-switch button:hover {
+  color: var(--text) !important;
+}
+
+.theme-switch button.active {
+  border-color: var(--accent-line) !important;
+  background: var(--surface) !important;
+  color: var(--primary-strong) !important;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.08) !important;
+}
+
+:root[data-theme='dark'] .theme-switch button.active {
+  background: rgba(214, 163, 75, 0.12) !important;
+  color: var(--primary-strong) !important;
+}
+
+.management-workspace {
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+.management-workspace .page-section {
+  max-width: none;
+}
+
+.management-workspace > .page-section > .page-title-row,
+.management-workspace .overview-hero,
+.management-workspace .management-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 148px;
+  margin-bottom: 18px;
+  padding: 26px 28px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--panel-header-bg);
+  box-shadow: var(--shadow-sm);
+}
+
+.management-workspace .agenda-page > .page-title-row {
+  margin-bottom: 0;
+}
+
+.management-workspace .page-title-row > *,
+.management-workspace .overview-hero > *,
+.management-workspace .management-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.management-workspace .page-title-row h2,
+.management-workspace .management-hero h2,
+.management-workspace .overview-hero h2 {
+  letter-spacing: -.045em;
+}
+
+.management-workspace .panel,
+.management-workspace .metric-card,
+.management-workspace .client-insight-card,
+.management-workspace .finance-metric-card,
+.management-workspace .settings-overview-card {
+  border-color: var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+:root[data-theme='dark'] .management-workspace .panel,
+:root[data-theme='dark'] .management-workspace .metric-card,
+:root[data-theme='dark'] .management-workspace .client-insight-card,
+:root[data-theme='dark'] .management-workspace .finance-metric-card,
+:root[data-theme='dark'] .management-workspace .settings-overview-card {
+  background:
+    radial-gradient(circle at 98% 0%, rgba(214, 163, 75, 0.04), transparent 27%),
+    #121512;
+}
+
+.management-workspace .panel,
+.management-workspace .metric-card,
+.management-workspace .client-insight-card,
+.management-workspace .finance-metric-card,
+.management-workspace .settings-overview-card {
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+:root[data-theme='dark'] .management-workspace .panel:hover,
+:root[data-theme='dark'] .management-workspace .metric-card:hover,
+:root[data-theme='dark'] .management-workspace .client-insight-card:hover,
+:root[data-theme='dark'] .management-workspace .finance-metric-card:hover,
+:root[data-theme='dark'] .management-workspace .settings-overview-card:hover {
+  border-color: rgba(214, 163, 75, 0.30);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.30);
+}
+
+button:not(.nav-button):not(.icon-button):not(.text-button):not(.theme-button):not(.deposit-button):not(.date-option):not(.time-slot) {
+  background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+  border: 1px solid rgba(255, 216, 141, 0.30);
+  color: var(--on-primary);
+  box-shadow: 0 10px 24px var(--accent-glow);
+}
+
+.secondary-button,
+.theme-button {
+  border-color: var(--border) !important;
+  background: var(--surface-soft) !important;
+  color: var(--text) !important;
+}
+
+.secondary-button:hover,
+.theme-button:hover {
+  border-color: var(--accent-line) !important;
+  background: var(--surface-strong) !important;
+}
+
+input,
+select,
+textarea {
+  border-color: var(--border);
+  background: var(--surface-soft);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-soft), 0 0 24px var(--accent-glow);
+}
+
+:root[data-theme='dark'] .agenda-rule-banner {
+  border-color: var(--accent-line);
+  background: rgba(214, 163, 75, 0.12);
+}
+
+:root[data-theme='dark'] .agenda-rule-banner > div,
+:root[data-theme='dark'] .agenda-professional-header,
+:root[data-theme='dark'] .agenda-event-card,
+:root[data-theme='dark'] .agenda-week-day {
+  background-color: var(--surface) !important;
+}
+
+:root[data-theme='dark'] .agenda-rule-banner .agenda-rule-ok {
+  background: linear-gradient(135deg, var(--primary-soft), var(--surface));
+}
+
+:root[data-theme='dark'] .agenda-view-switch,
+:root[data-theme='dark'] .clients-toolbar,
+:root[data-theme='dark'] .finance-result-hero {
+  border-color: var(--accent-line);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+:root[data-theme='dark'] .client-insight-card.accent,
+:root[data-theme='dark'] .finance-metric-card.accent {
+  border-color: rgba(214, 163, 75, 0.46);
+  background:
+    radial-gradient(circle at 92% 8%, rgba(214, 163, 75, 0.15), transparent 38%),
+    #121512;
+}
+
+:root[data-theme='dark'] .premium-client-row,
+:root[data-theme='dark'] .premium-expense-row {
+  background: var(--surface-soft);
+}
+
+:root[data-theme='dark'] .finance-margin-ring {
+  background:
+    radial-gradient(circle, var(--surface) 58%, transparent 60%),
+    conic-gradient(var(--primary) var(--margin), var(--surface-strong) 0);
+}
+
+:root[data-theme='dark'] .management-workspace .check-list span,
+:root[data-theme='dark'] .management-workspace .opportunity-card,
+:root[data-theme='dark'] .management-workspace .info-callout {
+  border-color: var(--border);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+:root[data-theme='dark'] {
+  scrollbar-color: rgba(214, 163, 75, 0.40) #0b0d0c;
+}
+
+@media (max-width: 850px) {
+  .topbar {
+    padding: 18px;
+  }
+
+  .theme-switch {
+    order: 3;
+  }
+
+  .management-workspace > .page-section > .page-title-row,
+  .management-workspace .overview-hero,
+  .management-workspace .management-hero {
+    min-height: auto;
+    padding: 22px;
+  }
+}
+
+@media (max-width: 580px) {
+  .theme-switch {
+    width: 100%;
+  }
+
+  .theme-switch button {
+    flex: 1 1 50%;
+  }
+
+  .management-workspace > .page-section > .page-title-row,
+  .management-workspace .overview-hero,
+  .management-workspace .management-hero {
+    padding: 19px;
+    border-radius: 19px;
+  }
+}
+
+/* ThemeSwitch compartilhado — painel, login e onboarding */
+.theme-switch.compact {
+  min-height: 38px;
+  padding: 3px;
+  border-radius: 12px;
+}
+
+.theme-switch.compact button {
+  min-height: 30px !important;
+  padding-inline: 9px !important;
+  font-size: .68rem !important;
+}
+
+.theme-switch button,
+.theme-switch.compact button {
+  background: transparent !important;
+  border-color: transparent !important;
+  color: var(--muted) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.theme-switch button.active,
+.theme-switch.compact button.active {
+  border-color: var(--accent-line) !important;
+  background: var(--surface) !important;
+  color: var(--primary-strong) !important;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, .08) !important;
+}
+
+:root[data-theme='dark'] .theme-switch button.active,
+:root[data-theme='dark'] .theme-switch.compact button.active {
+  background: rgba(214, 163, 75, .12) !important;
+  color: var(--primary-strong) !important;
+}
+
+/* V11.4 — Color Integrity Layer
+   Regra: no painel, login e onboarding nenhum componente herdado pode impor
+   fundos claros/cores antigas por fora dos tokens do tema atual. */
+:root[data-theme='dark'] body,
+:root[data-theme='dark'] .main-content,
+:root[data-theme='dark'] .state-page,
+:root[data-theme='dark'] .premium-onboarding-shell,
+:root[data-theme='dark'] .auth-screen,
+:root[data-theme='dark'] .onboarding-success-screen {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+:root[data-theme='dark'] .panel,
+:root[data-theme='dark'] .metric-card,
+:root[data-theme='dark'] .section-card,
+:root[data-theme='dark'] .standalone-header,
+:root[data-theme='dark'] .choice-card,
+:root[data-theme='dark'] .schedule-row,
+:root[data-theme='dark'] .service-editor-card,
+:root[data-theme='dark'] .professional-editor,
+:root[data-theme='dark'] .payment-method-card,
+:root[data-theme='dark'] .settings-toggle-row,
+:root[data-theme='dark'] .module-card,
+:root[data-theme='dark'] .module-choice-card,
+:root[data-theme='dark'] .review-card,
+:root[data-theme='dark'] .day-card,
+:root[data-theme='dark'] .period-row,
+:root[data-theme='dark'] .media-editor-card,
+:root[data-theme='dark'] .preview-toolbar,
+:root[data-theme='dark'] .modal,
+:root[data-theme='dark'] .agenda-professional-column,
+:root[data-theme='dark'] .agenda-professional-header,
+:root[data-theme='dark'] .agenda-event-card,
+:root[data-theme='dark'] .agenda-block-card,
+:root[data-theme='dark'] .agenda-free-card,
+:root[data-theme='dark'] .agenda-week-day,
+:root[data-theme='dark'] .appointment-inspector,
+:root[data-theme='dark'] .premium-client-row,
+:root[data-theme='dark'] .premium-expense-row,
+:root[data-theme='dark'] .client-insight-card,
+:root[data-theme='dark'] .finance-metric-card,
+:root[data-theme='dark'] .settings-overview-card {
+  background-color: var(--surface) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+:root[data-theme='dark'] .empty-inline,
+:root[data-theme='dark'] .opportunity-card,
+:root[data-theme='dark'] .info-callout,
+:root[data-theme='dark'] .finance-calculation-note,
+:root[data-theme='dark'] .finance-result-hero,
+:root[data-theme='dark'] .clients-toolbar,
+:root[data-theme='dark'] .agenda-view-switch,
+:root[data-theme='dark'] .theme-switch,
+:root[data-theme='dark'] .sidebar-card,
+:root[data-theme='dark'] .booking-sticky-footer,
+:root[data-theme='dark'] .onboarding-actions,
+:root[data-theme='dark'] .onboarding-topbar {
+  background-color: var(--surface-soft) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+:root[data-theme='dark'] input,
+:root[data-theme='dark'] select,
+:root[data-theme='dark'] textarea,
+:root[data-theme='dark'] .input-prefix,
+:root[data-theme='dark'] .number-suffix,
+:root[data-theme='dark'] .calendar-nav-button,
+:root[data-theme='dark'] .secondary-button,
+:root[data-theme='dark'] .theme-button,
+:root[data-theme='dark'] .icon-button,
+:root[data-theme='dark'] .upload-button,
+:root[data-theme='dark'] .selectable-chip,
+:root[data-theme='dark'] .weekday-button,
+:root[data-theme='dark'] .payment-choice,
+:root[data-theme='dark'] .module-toggle,
+:root[data-theme='dark'] .preview-toolbar button {
+  background: var(--surface-soft) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+:root[data-theme='dark'] input::placeholder,
+:root[data-theme='dark'] textarea::placeholder {
+  color: color-mix(in srgb, var(--muted) 82%, transparent);
+}
+
+:root[data-theme='dark'] input:focus,
+:root[data-theme='dark'] select:focus,
+:root[data-theme='dark'] textarea:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 3px var(--focus-ring) !important;
+}
+
+:root[data-theme='dark'] .choice-card.active,
+:root[data-theme='dark'] .module-card.active,
+:root[data-theme='dark'] .module-choice-card.active,
+:root[data-theme='dark'] .payment-choice.active,
+:root[data-theme='dark'] .selectable-chip.active,
+:root[data-theme='dark'] .weekday-button.active,
+:root[data-theme='dark'] .day-selection-button.active {
+  background: var(--primary-soft) !important;
+  border-color: var(--accent-line) !important;
+  color: var(--primary-strong) !important;
+}
+
+/* Cores semânticas padronizadas nos dois temas. */
+.notice,
+.feedback,
+.launch-status.success,
+.protected-badge,
+.recommended-badge,
+.deposit-badge.paid {
+  background: var(--success-soft) !important;
+  border-color: var(--success-border) !important;
+  color: var(--success) !important;
+}
+
+.warning,
+.opportunity-card.warning,
+.launch-status.warning,
+.review-issue.recommendation,
+.deposit-badge.pending {
+  background: var(--warning-soft) !important;
+  border-color: var(--warning-border) !important;
+  color: var(--warning) !important;
+}
+
+.error,
+.review-issue.error,
+.danger-zone {
+  background: var(--danger-soft) !important;
+  border-color: var(--danger-border) !important;
+  color: var(--danger) !important;
+}
+
+:root[data-theme='dark'] .modal-backdrop {
+  background: var(--overlay);
+}
+
+:root[data-theme='dark'] .toast {
+  background: var(--toast-bg);
+  color: var(--toast-text);
+  border-color: var(--border);
+}
+
+/* A prévia pública respeita o tema escolhido da Página Pública.
+   Em `auto`, acompanha a preferência atual do aparelho/painel. */
+:root[data-theme='dark'] .customer-page-preview.light {
+  background: #ffffff !important;
+  color: #1f2420 !important;
+  border-color: #cfc8bb !important;
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] .customer-page-preview.dark,
+:root[data-theme='dark'] .customer-page-preview.auto {
+  background: #090b0a !important;
+  color: #f5f3ed !important;
+  border-color: rgba(214, 163, 75, .28) !important;
+  color-scheme: dark;
+}
+
+:root[data-theme='dark'] .customer-page-preview.dark .customer-preview-section,
+:root[data-theme='dark'] .customer-page-preview.auto .customer-preview-section {
+  background: #0f1210;
+  border-top-color: rgba(255, 255, 255, .085);
+}
+
+:root[data-theme='dark'] .customer-page-preview.dark .preview-chip-line span,
+:root[data-theme='dark'] .customer-page-preview.auto .preview-chip-line span {
+  background: rgba(214, 163, 75, .12);
+  color: #e8ba67;
+}
+
+
+
+/* V11.4.2 UI — integridade final da Visão Geral no tema escuro. */
+:root[data-theme='dark'] .occupancy-ring {
+  background: conic-gradient(var(--primary) var(--occupancy), var(--surface-strong) 0) !important;
+}
+
+:root[data-theme='dark'] .occupancy-ring > div {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+}
+
+:root[data-theme='dark'] .overview-first-day {
+  background: var(--surface-soft) !important;
+  border-color: var(--accent-line) !important;
+  color: var(--text) !important;
+}
+
+:root[data-theme='dark'] .overview-first-day > strong {
+  color: var(--text) !important;
+}
