@@ -1,0 +1,1 @@
+-- Historical remote migration. Final definitions are consolidated in 20260826185100_production_agenda_final_state.sql.

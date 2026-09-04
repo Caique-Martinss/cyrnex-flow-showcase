@@ -35,7 +35,7 @@ Em vez de focar apenas na interface, o projeto foi estruturado com uma visão de
 
 > **Este repositório é a vitrine técnica pública do projeto.**
 >
-> O código-fonte completo, migrations do banco de dados, configurações internas, credenciais e rotinas administrativas são mantidos em um repositório privado.
+> Este repositório inclui um snapshot sanitizado do código-fonte da V11.7.2 RC1 para avaliação técnica. Credenciais, segredos de produção, materiais operacionais privados e o histórico canônico de desenvolvimento permanecem privados.
 
 ---
 
@@ -268,7 +268,7 @@ O **CYRNEX Admin** foi desenvolvido para apoiar operações da plataforma, como:
 - diagnósticos operacionais
 - ações administrativas controladas
 
-A implementação interna dessa camada administrativa permanece protegida no repositório privado.
+A camada administrativa da plataforma está incluída no snapshot sanitizado do código-fonte público. Credenciais de produção, dados operacionais sensíveis e materiais privados de deploy permanecem excluídos.
 
 ---
 
@@ -412,17 +412,17 @@ Seu objetivo é demonstrar experiência prática com:
 - desenvolvimento de produto
 - qualidade e escalabilidade
 
-O código-fonte completo do CYRNEX FLOW permanece **privado**.
+Este repositório inclui um **snapshot sanitizado do código-fonte da V11.7.2 RC1** para avaliação técnica.
 
-Este showcase público não expõe intencionalmente:
+O snapshot público inclui frontend, backend, migrations e políticas de banco de dados, workflows de CI, exemplos de configuração de deploy, scripts e documentação técnica.
 
-- código-fonte proprietário
-- migrations do banco de dados
-- credenciais
-- configurações internas
-- scripts administrativos
-- rotinas de produção
-- detalhes sensíveis de infraestrutura
+Permanecem intencionalmente excluídos:
+
+- credenciais e segredos
+- documentos operacionais privados
+- configurações sensíveis exclusivas de produção
+- dados pessoais ou de clientes
+- o histórico canônico privado de desenvolvimento
 
 ---
 
@@ -430,20 +430,30 @@ Este showcase público não expõe intencionalmente:
 
 ```text
 cyrnex-flow-showcase/
-│
-├── README.md
-├── README.pt-BR.md
-│
-└── screenshots Cyrnex Flow/
-    ├── 01-visao-geral.png
-    ├── 02-agenda.png
-    ├── 03-clientes.png
-    ├── 04-financeiro-faturamento.png
-    ├── 05-financeiro-despesas.png
-    └── 06-pagina-publica.png
+|
++-- README.md
++-- README.pt-BR.md
++-- screenshots Cyrnex Flow/
+|   +-- 01-visao-geral.png
+|   +-- 02-agenda.png
+|   +-- 03-clientes.png
+|   +-- 04-financeiro-faturamento.png
+|   +-- 05-financeiro-despesas.png
+|   +-- 06-pagina-publica.png
+|
++-- source/
+    +-- web/
+    +-- server/
+    +-- supabase/
+    +-- scripts/
+    +-- docs/
+    +-- .github/
+    +-- package.json
+    +-- render.yaml
+    +-- .env.example
 ```
 
-O showcase foi mantido propositalmente enxuto: seu objetivo é apresentar o produto, sua arquitetura e os conceitos de engenharia aplicados sem expor detalhes proprietários de implementação.
+O diretório `source/` contém o snapshot técnico sanitizado da V11.7.2 RC1, enquanto credenciais, segredos de produção, materiais operacionais privados e o histórico canônico de desenvolvimento permanecem excluídos.
 
 ---
 

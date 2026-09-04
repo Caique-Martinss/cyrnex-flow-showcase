@@ -35,7 +35,7 @@ Rather than focusing only on the user interface, the project was structured with
 
 > **This repository is the public technical showcase of the project.**
 >
-> The complete source code, database migrations, internal configurations, credentials, and administrative routines are maintained in a private repository.
+> This repository includes a sanitized V11.7.2 RC1 source snapshot for technical evaluation. Credentials, production secrets, private operational material, and the canonical development history remain private.
 
 ---
 
@@ -268,7 +268,7 @@ In addition to the business-facing application, the project includes a separate 
 - operational diagnostics
 - controlled administrative actions
 
-The internal implementation of this platform administration layer remains protected in the private repository.
+The platform administration layer is included in the sanitized public source snapshot. Production credentials, sensitive operational data, and private deployment material remain excluded.
 
 ---
 
@@ -412,17 +412,17 @@ Its purpose is to demonstrate practical experience with:
 - product development
 - quality and scalability
 
-The complete CYRNEX FLOW source code remains **private**.
+This repository includes a **sanitized V11.7.2 RC1 source snapshot** for technical evaluation.
 
-This public showcase intentionally does not expose:
+The public snapshot includes frontend, backend, database migrations and policies, CI workflows, deployment configuration examples, scripts, and technical documentation.
 
-- proprietary source code
-- database migrations
-- credentials
-- internal configurations
-- administrative scripts
-- production routines
-- sensitive infrastructure details
+The following remain intentionally excluded:
+
+- credentials and secrets
+- private operational documents
+- production-only sensitive configuration
+- personal or customer data
+- the canonical private development history
 
 ---
 
@@ -430,20 +430,30 @@ This public showcase intentionally does not expose:
 
 ```text
 cyrnex-flow-showcase/
-│
-├── README.md
-├── README.pt-BR.md
-│
-└── screenshots Cyrnex Flow/
-    ├── 01-visao-geral.png
-    ├── 02-agenda.png
-    ├── 03-clientes.png
-    ├── 04-financeiro-faturamento.png
-    ├── 05-financeiro-despesas.png
-    └── 06-pagina-publica.png
+|
++-- README.md
++-- README.pt-BR.md
++-- screenshots Cyrnex Flow/
+|   +-- 01-visao-geral.png
+|   +-- 02-agenda.png
+|   +-- 03-clientes.png
+|   +-- 04-financeiro-faturamento.png
+|   +-- 05-financeiro-despesas.png
+|   +-- 06-pagina-publica.png
+|
++-- source/
+    +-- web/
+    +-- server/
+    +-- supabase/
+    +-- scripts/
+    +-- docs/
+    +-- .github/
+    +-- package.json
+    +-- render.yaml
+    +-- .env.example
 ```
 
-The showcase is intentionally minimal: its purpose is to present the product, its architecture, and the engineering concepts applied without exposing proprietary implementation details.
+The `source/` directory contains the sanitized V11.7.2 RC1 technical snapshot, while credentials, production secrets, private operational material, and the canonical development history remain excluded.
 
 ---
 

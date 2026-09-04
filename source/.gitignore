@@ -1,0 +1,35 @@
+# Dependencies / builds
+node_modules/
+dist/
+build/
+coverage/
+*.log
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local runtime data — nunca versionar dados, sessões ou e-mails de teste
+server/data/*
+!server/data/.gitkeep
+
+# Supabase local/CLI state
+supabase/.temp/
+supabase/.branches/
+
+# Tool / OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Hosting/local caches
+.vercel/
+.railway/
+.cache/
